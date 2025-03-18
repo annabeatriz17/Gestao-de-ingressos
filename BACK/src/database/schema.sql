@@ -12,10 +12,6 @@ CREATE TABLE ingressos (
     quantidade_disponivel INTEGER NOT NULL
 );
 
-CREATE TABLE ingressos_categorias (
-    id SERIAL PRIMARY KEY,
-    categoria VARCHAR(50) NOT NULL
-);
 
 INSERT INTO ingressos (evento, local, data_evento, categoria, preco, quantidade_disponivel) VALUES
 ('Tour Morada 25', 'Campinas', 2025-03-22, 'VIP', R$200.00, 10),
