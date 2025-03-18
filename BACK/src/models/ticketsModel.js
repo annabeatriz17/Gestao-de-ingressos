@@ -1,5 +1,6 @@
 const pool = require('../config/database');
 
+
 const getTickets = async () => {
     const result = await pool.query('SELECT * FROM ingressos');
     return result.rows;
