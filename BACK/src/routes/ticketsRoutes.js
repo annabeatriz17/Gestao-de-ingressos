@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const ticketsController = require('../controllers/ticketsController');
+const ticketsController = require('../controllers/ticketsControllers')
 
-router.get('/ingressos', ticketsController.listTickets);
-router.get('/ingressos/:id', ticketsController.getTicket);
+
+router.get('/ingressos', ticketsController.getAllTickets);
+router.get('/ingressos/:id', ticketsController.getTickets);
 router.post('/ingressos', ticketsController.createTicket);
-router.post('/venda', ticketsController.sellTicket);
 router.put('/ingressos/:id', ticketsController.updateTicket);
 router.delete('/ingressos/:id', ticketsController.deleteTicket);
 
