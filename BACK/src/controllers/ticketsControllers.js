@@ -3,6 +3,9 @@ const ticketsModel = require('../models/ticketsModel');
 const getAllTickets = async (req, res) => {
     try {
         const tickets = await ticketsModel.getTickets();
+    if (!tickets || tickets.length === 0) {
+        return res.status(404). json({ message: "Nenhum ingresso encontrado." });
+    }
         res.json(tickets);
     } catch (error) {
         res.status(404).json({ message: "Não foi possível buscar os ingressos." });
