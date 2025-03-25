@@ -113,7 +113,7 @@ const vendaTickets = async (req, res) => {
         }
   
         const novaQuantidade = ticket.quantidade_disponivel - quantidade
-        await ticketModel.updateQuantidade(id, novaQuantidade);
+        await ticketsModel.updateQuantidade(id, novaQuantidade);
   
         const precoTotal = (preco * quantidade).toFixed(2);
         const precoUnitario = preco.toFixed(2);
