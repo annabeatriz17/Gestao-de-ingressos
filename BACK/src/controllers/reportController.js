@@ -42,11 +42,11 @@ const exportTicketsPDF = async (req, res) => {
         doc.pipe(res);
 
         //Titulo
-        doc.fontSize(20).text("Tickets", {align: "center"});
+        doc.fontSize(20).text("GERENCIAMENTO DE INGRESSOS", {align: "center"});
         doc.moveDown(0.5);
 
         //Cabeçalho
-        doc.fontSize(10).text("Id | Evento | Local | Data | Categoria | Preço | Quantidade", {align: "center"});
+        doc.fontSize(13).text("Id | Evento | Local | Data | Categoria | Preço | Quantidade", {align: "center"});
         doc.moveDown(0.5);
 
         //Add dados do ticket
