@@ -1,12 +1,13 @@
 const ticketsModel = require('../models/ticketsModel');
 
-const getAllTickets = async (req, res) => {
+
+const getAllTickets = async (req, res) =>{
     try {
-        const { local } = req.query;
-        const tickets = await ticketsModel.getAllTickets(local);
-        res.status(200).json(tickets);
-    }catch (error) {
-        res.status(500).json({ message: "Não foi possível buscar os ingressos." });
+        const { local } = req.query
+        const tickets = await ticketsModel.getAllTickets(local)
+        res.status(200).json(tickets)
+    } catch (error) {
+        res.status(404).json({message: "Erro ao buscar ingressos"});
     }
 };
 
